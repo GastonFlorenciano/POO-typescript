@@ -26,15 +26,14 @@ export class Usuario implements IUsuario {
     }
 
     mostrarPrestados(): void {
-        console.log(`Materiales prestados por ${this.nombre}:`);
         this.prestados.forEach(material => {
-            console.log(`- ${material.titulo}`);
+            console.log(`Materiales prestados de ${this.nombre}: "${material.titulo}"`);
         });
     }
 
     mostrarUltimaPrestacion(): void {
         if (this.ultimaPrestacion) {
-            console.log(`Última prestación de ${this.nombre}: ${this.ultimaPrestacion.titulo}`);
+            console.log(`Última prestación de ${this.nombre}: "${this.ultimaPrestacion.titulo}"`);
         } else {
             console.log(`${this.nombre} no ha realizado ninguna prestación.`);
         }
